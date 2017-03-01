@@ -42,7 +42,7 @@ def Neural_Net(train_features, train_targets, val_features, val_targets, test_fe
     return predict_targets
 if __name__ == "__main__":
     # Load and prepare the data
-    data_path = 'Bike-Sharing-Dataset/hour.csv'
+    data_path = "hour.csv"
     rides = pd.read_csv(data_path)
     
     # Dummy variables
@@ -78,7 +78,7 @@ if __name__ == "__main__":
     val_features, val_targets = features[-60*24:], targets[-60*24:]
     
     
-    predict_targets = Neural_Net(train_features, train_targets["cnt"][:, np.newaxis], val_features, val_targets["cnt"][:, np.newaxis], test_features)  
+    predict_targets = Neural_Net(train_features, train_targets['cnt'][:, np.newaxis], val_features, val_targets['cnt'][:, np.newaxis], test_features)  
     
     
     # Check the prediction
